@@ -36,6 +36,16 @@ tasks:
     src: ./tmp/qbox/myLogo.png
     dest: ./myLogo.png
 
+    # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/qbox/qbox.sql
+
+  - action: download_github
+    dest: ./resources/[qbx]/qbx_garages
+    ref: main
+    src: https://github.com/qbox-project/qbx_garages
+
   - action: download_github
     dest: ./resources/[qbx]/qbx_ambulancejob
     ref: main
