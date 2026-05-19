@@ -40,13 +40,7 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbox/qbox.sql
-    
-  - action: download_file
-    path: ./tmp/ox_doorlock.zip
-    url: https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip
-  - action: unzip
-    dest: ./resources/[ox]
-    src: ./tmp/ox_doorlock.zip
+
 
   - action: download_file
     path: ./tmp/ox_inventory.zip
